@@ -22,6 +22,7 @@ Clone o repositório usando: https://github.com/gfmaurila/poc.api.mongodb.net8
 
 ### Configurando o Docker e Docker Compose
 docker-compose up --build
+http://localhost:5073/swagger/index.html
 
 ## Autor
 
