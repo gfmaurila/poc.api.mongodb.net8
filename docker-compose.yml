@@ -1,0 +1,36 @@
+version: '3.9'
+
+networks:
+  app-network:
+    driver: bridge
+
+services:
+
+  poc.minimal.api.mongodb-webapi:
+    image: ${DOCKER_REGISTRY-}poc.minimal.api.mongodb-webapi
+    container_name: poc.minimal.api.mongodb-webapi
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - 5073
+    ports:
+      - 5073:5073
+    links:
+      - mongoserver
+    networks:
+      - app-network
+    depends_on:
+      - mongoserver
+
+  mongoserver:
+    image: mongo:latest
+    container_name: mongoserver
+    restart: always
+    expose:
+      - 27017
+    ports:
+      - 27017:27017
+    networks:
+      - app-network

@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+
+  poc.minimal.api.mongodb-webapi:
+    ports:
+      - 5073:5073
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+    volumes:
+      - ~/.aspnet/https:/root/.aspnet/https:gfmaurila
+      - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:gfmaurila
