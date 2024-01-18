@@ -24,6 +24,9 @@ Clone o repositório usando: https://github.com/gfmaurila/poc.api.mongodb.net8
 docker-compose up --build
 http://localhost:5073/swagger/index.html
 
+## Youtube
+https://youtu.be/o80dzDP21Lg
+
 ## Autor
 
 - Guilherme Figueiras Maurila
